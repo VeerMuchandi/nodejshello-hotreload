@@ -1,0 +1,14 @@
+apiVersion: skaffold/v1
+kind: Config
+build:
+  artifacts:
+  - image: gcr.io/veer-dil1/mynodejsapp
+    context: .
+    sync:
+      infer: 
+      - '*.js'  
+deploy:
+  kubectl:
+    manifests:
+      - deployment.yaml
+      - service.yaml
