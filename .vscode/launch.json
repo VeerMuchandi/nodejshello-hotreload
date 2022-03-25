@@ -9,7 +9,16 @@
             "cleanUp": true,
             "portForward": true,
             "internalConsoleOptions": "neverOpen",
-            "imageRegistry": "gcr.io/veer-dil1"
+            "imageRegistry": "gcr.io/veer-dil1",
+            "debug": [
+                {
+                    "image": "mynodejsapp",
+                    "containerName": "mynodejsapp",
+                    "sourceFileMap": {
+                        "${workspaceFolder}": "/opt/backend"
+                    }
+                }
+            ]
         }
     ]
 }
